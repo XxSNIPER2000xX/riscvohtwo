@@ -1,14 +1,12 @@
-typedef unsigned char BYTE;
-typedef unsigned short WORD;
+#include <stdio.h>
 
-struct CPU {
-    WORD PC;            // program counter
-    BYTE SP;            // stack pointer
-
-    BYTE r1, r2, r3;    // registers
-    BYTE PS;            // process status (flags)
-};
+#include "globals.h"
+#include "cpu.h"
+#include "memory.h"
 
 int main(int argc, char** argv) {
+    struct CPU *cpu;
+    cpu_reset(&cpu);
+    printf("working!\n");
     return 0;
 }
