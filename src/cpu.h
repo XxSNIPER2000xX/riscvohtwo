@@ -9,11 +9,17 @@ struct CPU {
     BYTE ps;            // process status (flags)
 };
 
-void cpu_reset(struct CPU *cpu) {
+void cpu_reset(struct CPU *cpu, struct MEMORY *mem) {
     cpu->pc = 0xFFFC;
     cpu->sp = 0x10;
     cpu->ps = 0x00;
     cpu->r1 = cpu->r2 = cpu->r3 = 0x00;
+
+    mem_init(&mem);
+}
+
+void cpu_exec(struct MEMORY *mem) {
+    
 }
 
 #endif
