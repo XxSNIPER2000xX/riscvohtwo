@@ -1,6 +1,6 @@
 # compiler flags
 CC = gcc
-CFLAGS = -fsyntax-only
+CFLAGS = -g
 
 # files
 SRCS = main.c

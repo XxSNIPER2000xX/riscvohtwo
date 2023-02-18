@@ -1,13 +1,19 @@
 #include <stdio.h>
 
 #include "globals.h"
+#include "opcodes.h"
 #include "cpu.h"
 #include "memory.h"
 
 int main(int argc, char** argv) {
-    struct MEMORY *mem;
-    struct CPU *cpu;
+    struct CPU cpu;
+    struct MEMORY mem;
     cpu_reset(&cpu, &mem);
-    printf("working!\n");
+    // START --- INLINE PROGRAM
+    mem.data[0xFFFC] = LI;
+    mem.data[0xFFFD] = 0x69;
+    // END --- INLINE PROGRAM
+    cpu_exec(&cpu, &mem);
+    printf("working!!\n");
     return 0;
 }

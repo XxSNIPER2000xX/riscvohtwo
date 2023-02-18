@@ -1,6 +1,8 @@
 #ifndef GLOBALS_H
 #define GLOBALS_H
 
+#define MAX_MEM 65535
+
 typedef unsigned char BYTE;
 typedef unsigned short WORD;
 
