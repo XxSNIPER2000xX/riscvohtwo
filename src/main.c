@@ -15,5 +15,6 @@ int main(int argc, char** argv) {
     // END --- INLINE PROGRAM
     cpu_exec(&cpu, &mem);
     printf("working!!\n");
+    printf("r1: 0x%x\n", cpu.r1);
     return 0;
 }

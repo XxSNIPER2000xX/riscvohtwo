@@ -36,6 +36,7 @@ void cpu_exec(struct CPU *cpu, struct MEMORY *mem) {
         BYTE val = get_byte(cpu, mem);
         cpu->r1 = val;
         
+        // handle flags setup wrong -> fix sometime l8tor
         if (cpu->r1 == 0)
             cpu->ps = 0b00000010;
         
