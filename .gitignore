@@ -1,0 +1,8 @@
+### GITIGNORE ###
+
+# OBJECT FILES
+*.o
+
+# EXECUTABLES
+a
+*.out
